@@ -1,0 +1,22 @@
+{
+  "name": "sls-simple-perf-test",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/FreeWillaert/sls-simple-perf-test.git",
+  "author": "freewillaert",
+  "license": "MIT",
+  "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "chalk": "^2.3.0",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.91",
+    "@types/minimist": "^1.2.0",
+    "@types/node": "^6",
+    "@types/request-promise-native": "^1.0.10"
+  }
+}
