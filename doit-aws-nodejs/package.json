@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@types/aws-lambda": "0.0.22",
+    "@types/aws-sdk": "^2.7.0",
     "@types/node": "^8.0.57",
     "serverless-webpack": "^4.0.0",
     "ts-loader": "^2.3.7",
@@ -15,5 +16,8 @@
     "webpack": "^3.6.0"
   },
   "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.176.0"
+  }
 }

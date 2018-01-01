@@ -9,12 +9,14 @@
     "@types/chalk": "^2.2.0",
     "chalk": "^2.3.0",
     "lodash": "^4.17.4",
+    "mathjs": "^3.18.1",
     "minimist": "^1.2.0",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.91",
+    "@types/mathjs": "^0.0.35",
     "@types/minimist": "^1.2.0",
     "@types/node": "^6",
     "@types/request-promise-native": "^1.0.10"
