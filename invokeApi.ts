@@ -34,7 +34,7 @@ export async function invokeApi(apiUri: string, memorySize: number, duration: nu
             const rpsMax: number = math.max(allRoundsPerSecond);
 
             // We're not really interested in resultMean, but calculate it anyway to help detect bad implementations.
-            const resultMean: number = math.median(responses.map(r => r.result));
+            const resultMean: number = math.mean(responses.map(r => r.result));
 
             // Assume only 1 region, provider, runtime.
 
