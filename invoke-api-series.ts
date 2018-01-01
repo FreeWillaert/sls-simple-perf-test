@@ -29,7 +29,7 @@ const PARALLELS = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
         }
     } catch (error) {
         console.error(chalk.red("Error: " + error.message));
-        console.log(chalk.blue("Usage: invoke-api --uri=[API_URI] --memorySize=[MEM_SIZE_IN_MB] --parallel=[NUMBER OF PARALLEL REQUESTS] --duration=[SECONDS_TO_RUN]"));
+        console.log(chalk.blue("Usage: invoke-api-series --uri=[API_URI] --iterations=[NUMBER OF ITERATIONS]"));
     }
 })();
 
