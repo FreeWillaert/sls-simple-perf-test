@@ -27,14 +27,15 @@ export async function invokeApi(apiUri: string, memorySize: number, duration: nu
 
             var allRoundsPerSecond = responses.map(r => r.roundsPerSecond);
 
-            const rpsMean: number = math.mean(allRoundsPerSecond);
+            // For simplicity, all figures are rounded.
+            const rpsMean: number = Math.round(math.mean(allRoundsPerSecond));
             const rpsStdev: number = Math.round(math.std(allRoundsPerSecond));
-            const rpsMin: number = math.min(allRoundsPerSecond);
-            const rpsMedian: number = math.median(allRoundsPerSecond);
-            const rpsMax: number = math.max(allRoundsPerSecond);
+            const rpsMin: number = Math.round(math.min(allRoundsPerSecond));
+            const rpsMedian: number = Math.round(math.median(allRoundsPerSecond));
+            const rpsMax: number = Math.round(math.max(allRoundsPerSecond));
 
             // We're not really interested in resultMean, but calculate it anyway to help detect bad implementations.
-            const resultMean: number = math.mean(responses.map(r => r.result));
+            const resultMean: number = Math.round(math.mean(responses.map(r => r.result)));
 
             // Assume only 1 region, provider, runtime.
 
