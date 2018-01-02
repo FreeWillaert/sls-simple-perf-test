@@ -66,3 +66,5 @@ typings/
 
 # libreoffice files
 *.ods#
+
+output.csv
