@@ -60,3 +60,9 @@ typings/
 # all js and map files
 *.js
 *.map
+
+# debug files
+.vscode/*
+
+# libreoffice files
+*.ods#

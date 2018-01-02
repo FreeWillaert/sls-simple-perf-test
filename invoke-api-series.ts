@@ -15,7 +15,7 @@ const PARALLELS = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
         const apiUri: string = readArgValue(argv, "u", "uri");
         const iterations: number = +readArgValue(argv, "i", "iterations");
 
-        console.log(`timestamp,region,provider,runtime,memorySize,parallel,duration,rpsMean,rpsStdev,rpsMin,rpsMedian,rpsMax,resultMean`);
+        console.log(`timestamp,region,provider,runtime,memorySize,parallel,duration,requestDuration,rpsMean,rpsStdev,rpsMin,rpsMedian,rpsMax,resultMean`);
 
         for(let memorySize of MEMORY_SIZES) {
             for(let duration of DURATIONS) {
