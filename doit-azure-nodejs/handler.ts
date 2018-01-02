@@ -1,15 +1,12 @@
-import * as AWS from 'aws-sdk';
-import { APIGatewayEvent, ProxyResult, ProxyCallback, Callback, Context, Handler } from 'aws-lambda';
 
 const DEFAULT_DURATION_SECONDS = 1;
 
 const randomizer = Math.random;;
 const instanceId = Math.round(randomizer() * 1000000000);
 
+export const run = (context, req) => {
 
-export const run: Handler = (event: APIGatewayEvent, context: Context, cb: ProxyCallback) => {
-  
-  const durationString: string = event.queryStringParameters && event.queryStringParameters["duration"];
+  const durationString: string = req.query && req.query.duration;
   const duration = durationString ? +durationString : DEFAULT_DURATION_SECONDS;
 
   let random = 0.0;
@@ -23,9 +20,9 @@ export const run: Handler = (event: APIGatewayEvent, context: Context, cb: Proxy
     rounds++;
   }
 
-  const response = createResponse(200, {
-    region: AWS.config.region,
-    provider: "aws",
+  context.res = createResponse(200, {
+    region: process.env.azureRegion || "(local)", // Is there an easier way to obtain the region?
+    provider: "azure",
     runtime: "nodejs",
     instanceId,
     duration,
@@ -34,13 +31,14 @@ export const run: Handler = (event: APIGatewayEvent, context: Context, cb: Proxy
     result: Math.round(random)
   });
 
-  cb(null, response);
-}
+  context.done();
+};
 
-function createResponse(httpStatusCode: number, body: any): ProxyResult {
+function createResponse(httpStatusCode: number, body: any): any {
   return {
-    statusCode: httpStatusCode,
+    status: httpStatusCode,
     body: JSON.stringify(body),
-    headers: { "Content-Type": "application/json" }
+    headers: { "Content-Type": "application/json" },
+    isRaw: true
   };
 }

@@ -1,0 +1,29 @@
+service: doit-azure-nodejs
+
+provider:
+  name: azure
+  location: West Europe
+  stage: dev # is this supported for azure?
+  timeout:
+  environment:
+    azureRegion: ${self:provider.location}
+
+plugins:
+  - serverless-azure-functions
+
+functions:
+  # For now, set memory size fixed to 128
+  doit:
+    handler: handler.run
+    events:
+      - http: true
+        x-azure-settings:
+          name: req
+          methods:
+              - GET
+          route: doit/128
+          authLevel : anonymous
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: res
