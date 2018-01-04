@@ -1,0 +1,16 @@
+EMBER:sls-simple-perf-test Free$ node invoke-api-series.js --uri https://9uw2hjowec.execute-api.eu-west-3.amazonaws.com/dev -i 10 > output.csv
+Error: Error: getaddrinfo ENOTFOUND 9uw2hjowec.execute-api.eu-west-3.amazonaws.com 9uw2hjowec.execute-api.eu-west-3.amazonaws.com:443 for 128/1/13
+Error: Error: getaddrinfo ENOTFOUND 9uw2hjowec.execute-api.eu-west-3.amazonaws.com 9uw2hjowec.execute-api.eu-west-3.amazonaws.com:443 for 128/1/19
+Error: Error: getaddrinfo ENOTFOUND 9uw2hjowec.execute-api.eu-west-3.amazonaws.com 9uw2hjowec.execute-api.eu-west-3.amazonaws.com:443 for 128/1/20
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/2/18
+Error: Error: ESOCKETTIMEDOUT for 128/3/16
+Error: Error: ESOCKETTIMEDOUT for 128/3/17
+Error: Error: ESOCKETTIMEDOUT for 128/3/17
+Error: Error: ESOCKETTIMEDOUT for 128/3/19
+Error: Error: ESOCKETTIMEDOUT for 256/2/15
+Error: Error: ESOCKETTIMEDOUT for 256/2/19
+Error: Error: ESOCKETTIMEDOUT for 256/3/11
+Error: Error: ESOCKETTIMEDOUT for 512/1/13
+Error: Error: ESOCKETTIMEDOUT for 512/2/16
+Error: Error: ESOCKETTIMEDOUT for 512/2/16
+Error: Error: ESOCKETTIMEDOUT for 512/3/15

@@ -1,0 +1,24 @@
+EMBER:sls-simple-perf-test Free$ node invoke-api-series.js --uri https://doit-azure-nodejs.azurewebsites.net -i 10 > output_azure_nodejs_128_TEST2.csv
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/1/12Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/1/15Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/1/18
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/1/18Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/1/18Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/1/19
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/2/11^CEMBER:sls-simple-perf-test Free$ node invoke-api-series.js --uri https://doit-azure-nodejs.azurewebsites.net -i 10 > output_azure_nodejs_128_TEST3.csv
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/2/15
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/2/15
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/2/15
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/2/15
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/2/16
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/2/16
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/2/18
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/2/19
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/3/1
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/3/11
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/3/12
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/3/13
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/3/15
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/3/16
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/3/16
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/3/17
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/3/18
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/3/19
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/3/19
+Error: Unexpected type of argument in function add (expected: number or Complex or BigNumber or Fraction, actual: undefined, index: 1) for 128/3/19

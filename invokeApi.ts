@@ -6,6 +6,7 @@ import { create } from 'domain';
 
 const SUPPORTED_MEMORY_SIZES = [128, 256, 512];
 const MAX_DURATION = 30;
+const REQUEST_TIMEOUT = 120*1000; // 120s, should in practice be no more than 20 * 3 = 60? (for Azure...)
 
 export async function invokeApi(apiUri: string, memorySize: number, duration: number, parallel: number) {
     
@@ -50,14 +51,15 @@ export async function invokeApi(apiUri: string, memorySize: number, duration: nu
 function createRequestPromise(apiUri: string, memorySize: number, duration: number): Promise<any> {
     const requestUri = `${apiUri}/api/doit/${memorySize}`;
 
-    const requestOptions: any = {
+    const requestOptions: rp.Options = {
         method: "GET",
         uri: requestUri,
         qs: {
             duration: duration
         },
         json: true,
-        simple: false
+        simple: false,
+        timeout: REQUEST_TIMEOUT
     };
 
     return rp(requestOptions);
