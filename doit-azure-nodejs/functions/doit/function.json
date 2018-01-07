@@ -5,7 +5,7 @@
             "type": "httpTrigger",
             "direction": "in",
             "name": "req",
-            "route": "doit/128",
+            "route": "doit/{memorySize:int}",
             "authLevel": "anonymous",
             "methods": [
                 "GET"

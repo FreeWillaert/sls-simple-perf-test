@@ -21,7 +21,7 @@ functions:
           name: req
           methods:
               - GET
-          route: doit/128
+          route: doit/{memorySize:int}
           authLevel : anonymous
       - http: true
         x-azure-settings:

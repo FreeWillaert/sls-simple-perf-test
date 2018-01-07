@@ -1,11 +1,26 @@
+import * as fs from 'fs';
 
+const DEFAULT_MEMORY_SIZE = 128;
 const DEFAULT_DURATION_SECONDS = 1;
 
 const randomizer = Math.random;;
 const instanceId = Math.round(randomizer() * 1000000000);
 
-export const run = (context, req) => {
+let dummyData: any = [];
 
+let executionContext;
+
+export const run = (context, req) => {
+  executionContext = context;
+
+  let instanceMemorySize = req.params && req.params.memorySize;
+  if(!instanceMemorySize) {
+    executionContext.log("Using default memory size " + DEFAULT_MEMORY_SIZE);
+    instanceMemorySize = DEFAULT_MEMORY_SIZE;
+  }
+  consumeMemory(instanceMemorySize); 
+  executionContext.log(`Consuming ${memoryUsage()} megabytes at start.`);
+  
   const durationString: string = req.query && req.query.duration;
   const duration = durationString ? +durationString : DEFAULT_DURATION_SECONDS;
 
@@ -31,6 +46,8 @@ export const run = (context, req) => {
     result: Math.round(random)
   });
 
+  executionContext.log(`Consuming ${memoryUsage()} megabytes at end.`);
+
   context.done();
 };
 
@@ -41,4 +58,17 @@ function createResponse(httpStatusCode: number, body: any): any {
     headers: { "Content-Type": "application/json" },
     isRaw: true
   };
+}
+
+function consumeMemory(instanceMemorySize: number) {
+  while( memoryUsage() < (instanceMemorySize - 20)) {
+    // dummyData.push(fs.readFileSync('dummyfile','utf-8'))
+    dummyData.push((Array(5*1e6) as any).fill("X"));
+    executionContext.log(`Now consuming ${memoryUsage()} megabytes...`);
+  } 
+}
+
+// Returns memory (heap) usage in megabytes.
+function memoryUsage() : number {
+  return (process.memoryUsage().heapUsed / (1024 * 1024));
 }
